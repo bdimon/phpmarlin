@@ -32,25 +32,24 @@
                     </div>
                     <div class="panel-container show">
                         <div class="panel-content">
-                            <?php $arr = [
+                            <?php $lessons = [
                                 ["title" => "Главная",
-                                 "href" => "https://site.main.loc",
-                                 "isactive" => false],
+                                 "href" => "#",
+                                 "active" => false],
                                 ["title" => "PHP",
-                                 "href" => "https://site.php.loc",
-                                 "isactive" => false],
+                                 "href" => "#",
+                                 "active" => false],
                                 ["title" => "Функции",
-                                 "href" => "https://site.functions.loc",
-                                 "isactive" => true],
+                                 "href" => "#",
+                                 "active" => true],
                             ];?>
                             <ol class="breadcrumb page-breadcrumb">
-                                <?php foreach($arr as $item):
-                                    if(!$item["isactive"]): 
-                                        ?>
-                                <li class="breadcrumb-item"><a href="<?php echo $item["href"]; ?>"><?php echo $item["title"];?></a></li>
+                                <?php foreach($lessons as $item):
+                                    if(!$item["active"]): ?>
+                                <li class="breadcrumb-item"><a href="<?php echo $item["href"]; ?>"><?php echo $item["title"]; ?></a></li>
                                 <?php else: ?>
                                 <li class="breadcrumb-item active"><?php echo $item["title"]; ?></li>
-                            <?php endif;?>
+                            <?php endif; ?>
 
                         <?php endforeach; ?>
                             </ol>
