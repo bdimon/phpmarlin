@@ -31,12 +31,12 @@
                         </div>
                     </div>
                     <div class="panel-container show">
-                    	<?php $arr = [
+                    	<?php $array = [
 
                         		[
-                        			"title" => "My Tasks",
-                        		    "content" => "130 / 500",
-                        		    "progress" => "bg-fusion-400",
+                        		    "title" => "My Tasks",
+                        		    "span" => "130 / 500",
+                        		    "class" => "bg-fusion-400",
                         		    "width" => "65%",
                         		    "valnow" => "65",
                         		    "valmin" => "0",
@@ -44,9 +44,9 @@
                         		],
 
                         		[
-									"title" => "Transfered",
-                        		    "content" => "440 TB",
-                        		    "progress" => "bg-success-500",
+					    "title" => "Transfered",
+                        		    "span" => "440 TB",
+                        		    "class" => "bg-success-500",
                         		    "width" => "34%",
                         		    "valnow" => "34",
                         		    "valmin" => "0",
@@ -54,9 +54,9 @@
                         		],
 
                         		[
-									"title" => "Bugs Squashed",
-                        		    "content" => "77%",
-                        		    "progress" => "bg-info-400",
+					    "title" => "Bugs Squashed",
+                        		    "span" => "77%",
+                        		    "class" => "bg-info-400",
                         		    "width" => "77%",
                         		    "valnow" => "77",
                         		    "valmin" => "0",
@@ -64,51 +64,28 @@
                         		],
 
                         		[
-                        			"title" => "User Testing",
-                        		    "content" => "7 days",
-                        		    "progress" => "bg-primary-300",
+                        		    "title" => "User Testing",
+                        		    "span" => "7 days",
+                        		    "class" => "bg-primary-300",
                         		    "width" => "84%",
                         		    "valnow" => "84",
                         		    "valmin" => "0",
                         		    "valmax" => "100"
-                        		],
-
-                        		
+                        		]                        		
                         	]; ?>
                         <div class="panel-content">
                         	<?php 
-                        		foreach($arr as $item): ?>
+                        		foreach($array as $item): ?>
                         	<div class="d-flex mt-2">
                                 <?php echo $item['title']; ?>
-                                <span class="d-inline-block ml-auto"><?php echo $item['content']; ?></span>
+                                <span class="d-inline-block ml-auto"><?php echo $item['span']; ?></span>
                             </div>
                             <div class="progress progress-sm mb-3">
-                                <div class="progress-bar <?php echo $item['progress']; ?>" role="progressbar" style="width: <?php echo $item['width']; ?>" aria-valuenow="<?php echo $item['valnow']; ?>" aria-valuemin="<?php echo $item['valmin']; ?>" aria-valuemax="<?php echo $item['valmax']; ?>">
+                                <div class="progress-bar <?php echo $item['class']; ?>" role="progressbar" style="width: <?php echo $item['width']; ?>" aria-valuenow="<?php echo $item['valnow']; ?>" aria-valuemin="<?php echo $item['valmin']; ?>" aria-valuemax="<?php echo $item['valmax']; ?>">
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                            <!--div class="d-flex">
-                                Transfered
-                                <span class="d-inline-block ml-auto">440 TB</span>
-                            </div>
-                            <div class="progress progress-sm mb-3">
-                                <div class="progress-bar bg-success-500" role="progressbar" style="width: 34%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="d-flex">
-                                Bugs Squashed
-                                <span class="d-inline-block ml-auto">77%</span>
-                            </div>
-                            <div class="progress progress-sm mb-3">
-                                <div class="progress-bar bg-info-400" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="d-flex">
-                                User Testing
-                                <span class="d-inline-block ml-auto">7 days</span>
-                            </div>
-                            <div class="progress progress-sm mb-g">
-                                <div class="progress-bar bg-primary-300" role="progressbar" style="width: 84%;" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div-->
-                        </div>
+                       </div>
                     </div>
                 </div>
             </div>
