@@ -68,8 +68,8 @@
                                                 ],
 
                                             ];
-                                        ?>
-                                    	<?php foreach($items as $item):?>
+                                        
+                                    	foreach($items as $item): ?>
                                         <li class="list-group-item">
                                             <span data-filter-tags="<?php echo $item['tag']; ?>"><?php echo $item['span']; ?></span>
                                         </li>
