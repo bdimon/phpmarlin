@@ -32,17 +32,17 @@
                     </div>
                     <?php 
                             mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-                            $link = mysqli_connect("localhost", "root", "", "marlin");
-                            if ($link == false){
+                            $con = mysqli_connect("localhost", "root", "", "marlin");
+                            if ($con == false){
                                 print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
                             }
                             else {
                                 print("Соединение установлено успешно");
                             }
-                            mysqli_set_charset($link, "utf8");
+                            mysqli_set_charset($con, "utf8");
 
                             $sql = 'SELECT * from authors';
-                            $result = mysqli_query($link, $sql);
+                            $result = mysqli_query($con, $sql);
                             if ($result == false) {
                                 print("Произошла ошибка при выполнении запроса");
                                 }
