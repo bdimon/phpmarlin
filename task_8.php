@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <?php 
-                    $pdo = new PDO("mysql:host=localhost;dbname=marlin;", "root", "" );
+                    $pdo = new PDO("mysql:host=localhost;dbname=php_lessons;", "root", "" );
                             $sql ='SELECT * FROM actions';
                             $stmt = $pdo->prepare($sql);
                             $stmt->execute();
