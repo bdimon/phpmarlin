@@ -32,7 +32,7 @@
                     </div>
                     <?php 
                             mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-                            $con = mysqli_connect("localhost", "root", "", "marlin");
+                            $con = mysqli_connect("localhost", "root", "", "php_lessons");
                             if ($con == false){
                                 print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
                             }
