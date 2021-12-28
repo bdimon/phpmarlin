@@ -33,9 +33,9 @@
                     <?php 
                     $pdo = new PDO("mysql:host=localhost;dbname=php_lessons;", "root", "" );
                             $sql ='SELECT * FROM actions';
-                            $stmt = $pdo->prepare($sql);
-                            $stmt->execute();
-                            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                            $statement = $pdo->prepare($sql);
+                            $statement->execute();
+                            $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
                             // var_dump($rows);
                     ?>
                     <div class="panel-container show">
@@ -56,17 +56,17 @@
                                     </thead>
                                     <tbody>
                                     	<?php 
-                                    		foreach($rows as $act):
+                                    		foreach($rows as $user):
                                     	?>
                                         <tr>
-                                            <th scope="row"><?php echo $act["id"]; ?></th>
-                                            <td><?php echo $act["first_name"]; ?></td>
-                                            <td><?php echo $act["last_name"]; ?></td>
-                                            <td><?php echo $act["username"]; ?></td>
+                                            <th scope="row"><?php echo $user["id"]; ?></th>
+                                            <td><?php echo $user["first_name"]; ?></td>
+                                            <td><?php echo $user["last_name"]; ?></td>
+                                            <td><?php echo $user["username"]; ?></td>
                                             <td>
-                                                <a href="show.php?id=<?php echo $act["id"]; ?>" class="btn btn-info">Редактировать</a>
-                                                <a href="edit.php?id=<?php echo $act["id"]; ?>" class="btn btn-warning">Изменить</a>
-                                                <a href="delete.php?id=<?php echo $act["id"]; ?>" class="btn btn-danger">Удалить</a>
+                                                <a href="show.php?id=<?php echo $user["id"]; ?>" class="btn btn-info">Редактировать</a>
+                                                <a href="edit.php?id=<?php echo $user["id"]; ?>" class="btn btn-warning">Изменить</a>
+                                                <a href="delete.php?id=<?php echo $user["id"]; ?>" class="btn btn-danger">Удалить</a>
                                             </td>
                                         </tr>
                                     <?php endforeach;?>
